@@ -17892,6 +17892,99 @@ video {
   background-color: rgba(43, 108, 176, var(--bg-opacity))
 }
 
+.color-pill{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  margin-right: 0.5rem
+}
+
+.color-pill:hover{
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  margin-right: 0.5rem
+}
+
+.box {
+  border: 1px solid gray;
+  height: 3rem
+}
+
+.box--black {
+  --bg-opacity: 1;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, var(--bg-opacity))
+}
+
+.box--white {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity))
+}
+
+.box--gray {
+  --bg-opacity: 1;
+  background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity))
+}
+
+.box--red {
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity))
+}
+
+.box--orange {
+  --bg-opacity: 1;
+  background-color: #ed8936;
+  background-color: rgba(237, 137, 54, var(--bg-opacity))
+}
+
+.box--yellow {
+  --bg-opacity: 1;
+  background-color: #ecc94b;
+  background-color: rgba(236, 201, 75, var(--bg-opacity))
+}
+
+.box--green {
+  --bg-opacity: 1;
+  background-color: #48bb78;
+  background-color: rgba(72, 187, 120, var(--bg-opacity))
+}
+
+.box--teal {
+  --bg-opacity: 1;
+  background-color: #38b2ac;
+  background-color: rgba(56, 178, 172, var(--bg-opacity))
+}
+
+.box--blue {
+  --bg-opacity: 1;
+  background-color: #4299e1;
+  background-color: rgba(66, 153, 225, var(--bg-opacity))
+}
+
+.box--indigo {
+  --bg-opacity: 1;
+  background-color: #667eea;
+  background-color: rgba(102, 126, 234, var(--bg-opacity))
+}
+
+.box--purple {
+  --bg-opacity: 1;
+  background-color: #9f7aea;
+  background-color: rgba(159, 122, 234, var(--bg-opacity))
+}
+
+.bg--pink {
+  --bg-opacity: 1;
+  background-color: #ed64a6;
+  background-color: rgba(237, 100, 166, var(--bg-opacity))
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

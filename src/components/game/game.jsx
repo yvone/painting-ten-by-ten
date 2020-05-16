@@ -8,23 +8,21 @@ import '../../styles/index.css';
 
 function Game(props) {
     return (
-        <div className="flex flex-col p-4 items-center">
-            <div className="flex flex-row full-w justify-between">
+        <div className="flex flex-col p-4">
+            <div className="flex flex-row full-w mb-2">
                 <button
-                    className="btn btn--blue"
+                    className="btn btn--blue mr-2"
                     type="button"
                 >
-                    New game
+                    New game 
                 </button>
                 <button
-                    className="btn btn--blue"
+                    className="btn btn--blue mr-2"
                     type="button"
                 >
                     Print
                 </button>
-                <div>
-                    <ColorPicker />
-                </div>
+                <ColorPicker />
             </div>
             <div>
                 <Board />
