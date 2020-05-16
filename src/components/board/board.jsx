@@ -3,8 +3,6 @@ import React from 'react';
 import Box from '../box';
 
 function Board(props) {
-    console.log(props);
-
     // const {
     //     grid,
     // } = props;
@@ -23,7 +21,7 @@ function Board(props) {
     ];
 
     return (
-        <div className="grid grid-cols-10">
+        <div className="grid grid-cols-10 board">
             {grid && grid.map(box => (
                 <Box />
             ))}

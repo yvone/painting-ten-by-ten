@@ -16,52 +16,54 @@
     @apply bg-blue-700
 }
 
-.color-pill{
-    @apply h-12 w-12 rounded-lg shadow-inner mr-2
+.color-pill {
+    @apply h-12 w-12 rounded-lg shadow-inner mr-2 p-4 cursor-pointer
 }
 
-.color-pill:hover{
-    @apply h-12 w-12 rounded-lg shadow-outline mr-2
+.color-pill:hover {
+    @apply h-12 w-12 rounded-lg shadow-outline mr-2 p-4 cursor-pointer
+}
+
+.color-pill--selected {
+    @apply h-12 w-12 rounded-lg shadow-outline mr-2 p-4
+}
+
+.board {
+    width: 30rem;
+    border: 1px solid black;
 }
 
 .box {
-    border: 1px solid gray;
-    @apply h-12
+    @apply border border-gray-400 w-12 h-12
 }
 
-.box--black {
-    @apply bg-black
+.bg-gray {
+    @apply bg-gray-400
 }
-.box--white {
-    @apply bg-white
-}
-.box--gray {
-    @apply bg-gray-500
-}
-.box--red {
+.bg-red {
     @apply bg-red-500
 }
-.box--orange {
-    @apply bg-orange-500
+.bg-orange {
+    @apply bg-orange-400
 }
-.box--yellow {
+.bg-yellow {
     @apply bg-yellow-500
 }
-.box--green {
-    @apply bg-green-500
+.bg-green {
+    @apply bg-green-400
 }
-.box--teal {
+.bg-teal {
     @apply bg-teal-500
 }
-.box--blue {
-    @apply bg-blue-500
+.bg-blue {
+    @apply bg-blue-400
 }
-.box--indigo {
+.bg-indigo {
     @apply bg-indigo-500
 }
-.box--purple {
-    @apply bg-purple-500
+.bg-purple {
+    @apply bg-purple-400
 }
-.bg--pink {
+.bg-pink {
     @apply bg-pink-500
 }

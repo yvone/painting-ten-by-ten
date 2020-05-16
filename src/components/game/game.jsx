@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 // components
 import ColorPicker from '../colorPicker';
@@ -7,6 +7,8 @@ import Board from '../board';
 import '../../styles/index.css';
 
 function Game(props) {
+    let [color, setColor] = useState('black');
+
     return (
         <div className="flex flex-col p-4">
             <div className="flex flex-row full-w mb-2">
@@ -22,7 +24,7 @@ function Game(props) {
                 >
                     Print
                 </button>
-                <ColorPicker />
+                <ColorPicker selectedColor={color} onChange={setColor} />
             </div>
             <div>
                 <Board />

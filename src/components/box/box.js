@@ -6,7 +6,7 @@ function Box(props) {
     } = props;
 
     return (
-        <div className={`box box--${color}`}>
+        <div className={`box bg-${color}`}>
             
         </div>
     )
