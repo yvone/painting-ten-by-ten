@@ -2,13 +2,15 @@ import React from 'react';
 
 function Box(props) {
     const {
-        color = 'white'
+        color = 'white',
+        onClick
     } = props;
 
     return (
-        <div className={`box bg-${color}`}>
-            
-        </div>
+        <div
+            className={`box bg-${color}`}
+            onClick={onClick}
+        />
     )
 }
 
