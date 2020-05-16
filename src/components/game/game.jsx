@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // components
 import ColorPicker from '../colorPicker';
@@ -6,22 +6,13 @@ import Board from '../board';
 
 import '../../styles/index.css';
 
-const INITIAL_GRID = [
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white',
-    'white','white','white','white','white','white','white','white','white','white'
-];
+const INITIAL_GRID = Array(100).fill('white');
 
 function Game(props) {
     let [color, setColor] = useState('black');
-    let [grid, setGrid] = useState(INITIAL_GRID);
+    let [grid, setGrid] = useState(window.localStorage.getItem('painting').split(',') || INITIAL_GRID);
+
+    useEffect(() => window.localStorage.setItem('painting', grid));
 
     function onColorChange(id){
         const newPainting = [...grid];
@@ -39,7 +30,7 @@ function Game(props) {
 
     return (
         <div className="flex flex-col p-4">
-            <div className="flex flex-row full-w mb-2">
+            <div className="flex flex-row full-w mb-4">
                 <button
                     className="btn btn--blue mr-2"
                     type="button"
@@ -59,7 +50,7 @@ function Game(props) {
                     onChange={setColor}
                 />
             </div>
-            <div>
+            <div className="flex flex-row full-w justify-between">
                 <Board
                     grid={grid}
                     onColorChange={onColorChange}

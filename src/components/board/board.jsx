@@ -12,7 +12,7 @@ function Board(props) {
     }
 
     function mouseMove(index, e) {
-        if(e.buttons === 1) {
+        if(e.buttons === 1) { // left-click = 1
             onColorChange(index);
         }
     }
