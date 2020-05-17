@@ -29,12 +29,61 @@
 }
 
 .board {
+    position: absolute;
     width: 30rem;
     border: 1px solid black;
 }
 
-.box {
+.board--clean {
+    border: none;
+}
+
+.board div.board-box {
     @apply border border-gray-400 w-12 h-12
+}
+
+.board--clean div.board-box {
+    border: none;
+    @apply w-12 h-12
+}
+
+.overlay {
+    visibility: hidden;
+    
+    width: 30rem;
+    height: 30rem;
+    
+    position: relative;
+    top: 0;
+    left: 0;
+    
+    z-index: 10;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.overlay--show {
+    visibility: visible;
+}
+
+#capture {
+    border: 1px solid black;
+    width: 30.2rem;
+    height: 30.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empty-state {
+    background-image: url('../assets/empty-state.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 7rem;
+    height: 7rem;
 }
 
 .bg-gray {

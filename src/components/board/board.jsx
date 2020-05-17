@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 function Board(props) {
     const {
         grid,
-        onColorChange
+        onColorChange,
+        isPrinting
     } = props;
 
     function changeBoxColor(index) {
@@ -18,22 +19,27 @@ function Board(props) {
     }
 
     return (
-        <div className="grid grid-cols-10 board">
-            {grid && grid.map((boxColor, index) => (
-                <div
-                    key={`box-${index}`}
-                    className={`box bg-${boxColor}`}
-                    onClick={() => changeBoxColor(index)}
-                    onMouseMove={(e) => mouseMove(index, e)}
-                />
-            ))}
+        <div className="flex">
+            <div className={`overlay ${isPrinting ? 'overlay--show' : ''}`}/>
+
+            <div id="painting" className="grid grid-cols-10 board" ref={props.paitingRef}>
+                {grid && grid.map((boxColor, index) => (
+                    <div
+                        key={`box-${index}`}
+                        className={`board-box bg-${boxColor}`}
+                        onClick={() => changeBoxColor(index)}
+                        onMouseMove={(e) => mouseMove(index, e)}
+                    />
+                ))}
+            </div>
         </div>
     )
 }
 
 Board.propTypes = {
     grid: PropTypes.array.isRequired,
-    onColorChange: PropTypes.func.isRequired
+    onColorChange: PropTypes.func.isRequired,
+    isPrinting: PropTypes.bool.isRequired
 }
 
 export default Board;
