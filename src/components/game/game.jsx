@@ -12,7 +12,9 @@ const INITIAL_GRID = Array(100).fill('white');
 
 function Game(props) {
     let [color, setColor] = useState('black');
-    let [grid, setGrid] = useState(window.localStorage.getItem('painting').split(',') || INITIAL_GRID);
+    let [grid, setGrid] = useState(
+        window.localStorage.getItem('painting') ? window.localStorage.getItem('painting').split(',') : INITIAL_GRID
+    );
     let [isPrinting, setIsPrinting] = useState(false);
     const painting = useRef();
     const capture = useRef();
