@@ -67,12 +67,6 @@ function Game(props) {
                 />
             </div>
             <div className="flex flex-row full-w justify-around">
-                <Board
-                    grid={grid}
-                    onColorChange={onColorChange}
-                    paitingRef={painting}
-                    isPrinting={isPrinting}
-                />
                 <div ref={capture} id="capture" className="bg-gray-200">
                     <div className="empty-state" />
                     <p className="my-4">There's no image to download. Draw and print!</p>
@@ -84,6 +78,13 @@ function Game(props) {
                         Print
                     </button>
                 </div>
+
+                <Board
+                    grid={grid}
+                    onColorChange={onColorChange}
+                    paitingRef={painting}
+                    isPrinting={isPrinting}
+                />
             </div>
         </div>
     )
